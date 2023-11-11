@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./app.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Trò chơi đoán số bí mật</h1>
+    <script>
+        var x = 10 + Math.round(5 * Math.random());
+        var a = prompt("Nhập số bạn đoán (từ 10 đến 15):");
+        if (a == x) {
+            alert("Chúc mừng, bạn đã đoán đúng! Số bí mật là " + x);
+        } else if (a > x) {
+            alert("Số bạn đoán lớn hơn số bí mật.");
+        } else {
+            alert("Số bạn đoán nhỏ hơn số bí mật.");
+        }
+    </script>
+
+</body>
+</html>

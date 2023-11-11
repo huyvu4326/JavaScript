@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var a = parseFloat(prompt("Nhập giá trị cạnh a:"));
+      var b = parseFloat(prompt("Nhập giá trị cạnh b:"));
+
+      if (!isNaN(a) && !isNaN(b)) {
+        var c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+        alert("Cạnh huyền c là: " + c);
+      } else {
+        alert("Vui lòng nhập giá trị hợp lệ cho cả hai cạnh a và b.");
+      }
+    </script>
+  </body>
+</html>

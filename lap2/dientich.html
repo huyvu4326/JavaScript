@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = prompt("Chiều dài: ");
+      let b = prompt("Chiều rộng: ");
+
+      let dienTichM2 = a * b;
+
+      let tyLeSao = dienTichM2 / 360;
+      let tyLeHecta = dienTichM2 / 3600;
+
+      console.log(
+        dienTichM2 +
+          " mét vuông tương ứng với " +
+          tyLeSao +
+          " sào và " +
+          tyLeHecta +
+          " ha"
+      );
+    </script>
+  </body>
+</html>
