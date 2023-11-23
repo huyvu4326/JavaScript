@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control Windows</title>
+  </head>
+  <body>
+    <h1>Control Windows</h1>
+    <button onclick="openNewWindow()">Mở cửa sổ mới</button>
+    <button onclick="closeNewWindow()">Đóng cửa sổ mới</button>
+    <button onclick="checkWindowStatus()">Kiểm tra cửa sổ mới</button>
+    <script>
+      var newWindow;
+      function openNewWindow() {
+        // Mở cửa sổ mới
+        if (window.navigator.userAgent.indexOf("MSIE") !== -1) {
+          // Nếu là IE
+          newWindow = window.open(
+            "",
+            "_blank",
+            "toolbar=yes,menubar=yes,width=100,height=100"
+          );
+        } else {
+          // Nếu không phải là IE
+          newWindow = window.open(
+            "",
+            "_blank",
+            "toolbar=yes,menubar=yes,width=150,height=150"
+          );
+        }
+      }
+      function closeNewWindow() {
+        // Đóng cửa sổ mới
+        if (newWindow) {
+          newWindow.close();
+        }
+      }
+      function checkWindowStatus() {
+        // Kiểm tra cửa sổ mới đã đóng hay chưa
+        if (newWindow && newWindow.closed) {
+          alert("Cửa sổ mới đã được đóng!");
+        } else {
+          alert("Cửa sổ mới chưa được đóng!");
+        }
+      }
+    </script>
+  </body>
+</html>

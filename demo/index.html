@@ -1,28 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="app.js"></script>
     <title>Document</title>
-</head>
-<body>
-    
-<!--   
-    <script>
-      function tinhCanhHuyen() {
-        const a = parseFloat(document.getElementById('a').value);
-        const b = parseFloat(document.getElementById('b').value);
-  
-        if (!isNaN(a) && !isNaN(b)) {
-          const c = Math.sqrt(a * a + b * b);
-          document.getElementById('result').textContent = "Cạnh huyền của tam giác vuông là: " + c;
-        } else {
-          document.getElementById('result').textContent = "Vui lòng nhập độ dài của cả hai cạnh góc vuông.";
-        }
-      }
-    </script> -->
-    <div>
+  </head>
+  <body>
+    <!-- <div>
       <div class="product" data="Sản phẩm 1">
         <h3>Product 1</h3>
       </div>
@@ -35,7 +20,10 @@
       <div class="product" data="Sản phẩm 4">
         <h3>Product 4</h3>
       </div>
-    </div>
+    </div> -->
+    <button type="button" onclick="ketQua
+    
+    (1.75, 75)">Tính</button>
     <script>
       // let a = ["Gà", "Trâu", "Gà", "Bò"];
       // let b = ["Cá", "Vịt"];
@@ -55,8 +43,43 @@
       // let canBac2 = Math.pow(2, 3);
       // console.log(canBac2);
 
-      let x = 8.6;
-      console.log(Math.round(x));
+      // let x = 8.6;
+      // console.log(Math.round(x));
+
+      // function tinhCanhHuyen(a,b){
+      //   let canhHuyen = Math.sqrt(a * a + b * b);
+      //   console.log(canhHuyen);
+      // }
+      // tinhCanhHuyen(7,8)
+
+      function BMI(a, b) {
+        let bmi = b / (a * a);
+        return bmi;
+      }
+
+      function ketQua(a,b){
+        let bmi = BMI(a,b)
+        if (bmi < 18.5) {
+          console.log("Thiếu cân");
+        } else if (bmi >= 18.5 && bmi < 25) {
+          console.log("Bình thường");
+        } else if (bmi >= 25 && bmi < 30) {
+          console.log("Thừa cân");
+        } else if (bmi >= 30) {
+          console.log("Béo phì");
+        }
+      }
+
+      // let mang = [2,3,6,8,4,5];
+      // let a = confirm("Bạn có muốn xóa");
+      // if(a == true){
+      //   mang.splice(4,1);
+      // }else{
+      //   console.log("Từ chối");
+      // }
+      // console.log(mang);
+
+      
     </script>
-</body>
+  </body>
 </html>

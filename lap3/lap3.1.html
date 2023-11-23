@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <script>
+      var a = prompt("Toán hạng a: ");
+      var b = prompt("Toán hạng b: ");
+      var o = prompt("Toán tử: ");
+
+      a = parseFloat(a);
+      b = parseFloat(b);
+      
+      switch (o) {
+        case "+":
+          var kq = a + b;
+          alert("Tổng____PH21367: " + kq);
+          break;
+        case "-":
+          var kq = a - b;
+          alert("Hiệu____PH21367: " + kq);
+          break;
+        case "x":
+          var kq = a * b;
+          alert("Tích____PH21367: " + kq);
+          break;
+        case ":":
+          var kq = a / b;
+          alert("Thương____PH21367: " + kq);
+          break;
+        default:
+          alert(o + " không phải là toán tử hợp lệ____PH21367");
+          break;
+      }
+    </script>
+  </body>
+</html>

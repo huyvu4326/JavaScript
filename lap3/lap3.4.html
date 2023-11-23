@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors Game</title>
+</head>
+<body>
+
+<input type="button" value="Rock" onclick="getValue(0);"/>
+<input type="button" value="Paper" onclick="getValue(1);"/>
+<input type="button" value="Scissors" onclick="getValue(2);"/>
+
+<script>
+    function getValue(x) {
+        // Mảng chứa Rock, Paper, và Scissors
+        var arr = ['Rock', 'Paper', 'Scissors'];
+        // Máy tính chọn giá trị ngẫu nhiên từ 0 đến 2
+        var s = Math.floor(Math.random() * 3);
+        // Hiển thị lựa chọn của người chơi và máy tính
+        var userChoice = arr[x];
+        var computerChoice = arr[s];
+        alert("Bạn chọn:____PH21367 " + userChoice + "\nMáy tính chọn:____PH21367 " + computerChoice);
+        // So sánh lựa chọn và hiển thị kết quả
+        if (userChoice === computerChoice) {
+            alert("Hòa nhau!____PH21367");
+        } else {
+            switch (userChoice) {
+                case 'Rock':
+                    resultMessage(userChoice, computerChoice, 'Scissors', 'Paper');
+                    break;
+                case 'Paper':
+                    resultMessage(userChoice, computerChoice, 'Rock', 'Scissors');
+                    break;
+                case 'Scissors':
+                    resultMessage(userChoice, computerChoice, 'Paper', 'Rock');
+                    break;
+                default:
+                    alert("Lựa chọn không hợp lệ");
+            }
+        }
+    }
+
+    // Hàm hiển thị kết quả
+    function resultMessage(user, computer, winMessage, loseMessage) {
+        if (computer === winMessage) {
+            alert("Bạn thắng____PH21367! " + user + " đánh bại " + computer);
+        } else if (computer === loseMessage) {
+            alert("Bạn thua____PH21367! " + computer + " đánh bại " + user);
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thông tin học sinh</title>
+  </head>
+  <body>
+    <h1>Thông tin học sinh</h1>
+    <button onclick="sv.hienThi()">Hiển thị</button>
+
+    <script>
+      var sv = new Object();
+      sv.hoTen = prompt("Nhập tên sinh viên: ");
+      sv.diem = parseFloat(prompt("Nhập điểm của sinh viên"));
+
+      sv.hienThi = function () {
+        var hocLuc = "";
+        if (sv.diem >= 8) {
+          hocLuc = "Giỏi";
+        } else if (sv.diem >= 6.5) {
+          hocLuc = "Khá";
+        } else if (sv.diem >= 5) {
+          hocLuc = "Trung bình";
+        } else {
+          hocLuc = "Yếu";
+        }
+
+        document.write("<h3>Họ và tên: " + sv.hoTen + "</h3>");
+        document.write("<h3>Điểm TB: " + sv.diem.toFixed(2) + "</h3>");
+        document.write("<h3>Học lực: " + hocLuc + "</h3>");
+      };
+    </script>
+  </body>
+</html>

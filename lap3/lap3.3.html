@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        input, button {
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <input id="display" type="text" disabled>
+</div>
+
+<div>
+    <button onclick="toan_hang(1)">1</button>
+    <button onclick="toan_hang(2)">2</button>
+    <button onclick="toan_hang(3)">3</button>
+    <button onclick="toan_tu('+')">+</button>
+</div>
+
+<div>
+    <button onclick="toan_hang(4)">4</button>
+    <button onclick="toan_hang(5)">5</button>
+    <button onclick="toan_hang(6)">6</button>
+    <button onclick="toan_tu('-')">-</button>
+</div>
+
+<div>
+    <button onclick="toan_hang(7)">7</button>
+    <button onclick="toan_hang(8)">8</button>
+    <button onclick="toan_hang(9)">9</button>
+    <button onclick="toan_tu('*')">*</button>
+</div>
+
+<div>
+    <button onclick="toan_hang(0)">0</button>
+    <button onclick="lam_lai()">C</button>
+    <button onclick="thuc_hien()">=</button>
+    <button onclick="toan_tu('/')">/</button>
+</div>
+
+<script>
+    var a = null, b = null, o = null;
+    var isTypingSecondOperand = false; //  Theo dõi xem người dùng có đang nhập toán hạng thứ hai hay không.
+
+    function toan_hang(x) {
+        if (isTypingSecondOperand) {
+            b = (b === null) ? x : b * 10 + x;
+        } else {
+            a = (a === null) ? x : a * 10 + x;
+        }
+        updateDisplay();
+    }
+
+    function toan_tu(x) {
+        o = x;
+        isTypingSecondOperand = true;
+        updateDisplay();
+    }
+
+    function lam_lai() {
+        a = null;
+        b = null;
+        o = null;
+        isTypingSecondOperand = false;
+        updateDisplay();
+    }
+
+    function thuc_hien() {
+        if (a !== null && b !== null && o !== null) {
+            switch (o) {
+                case '+':
+                    a = a + b;
+                    break;
+                case '-':
+                    a = a - b;
+                    break;
+                case '*':
+                    a = a * b;
+                    break;
+                case '/':
+                    if (b !== 0) {
+                        a = a / b;
+                    } else {
+                        alert("Không thể chia cho 0____PH21367");
+                    }
+                    break;
+                default:
+                    alert("Toán tử không hợp lệ____PH21367");
+            }
+            b = null;
+            o = null;
+            isTypingSecondOperand = false;
+            updateDisplay();
+        }
+    }
+
+    function updateDisplay() {
+        document.getElementById("display").value = (b !== null) ? b : (a !== null) ? a : "";
+    }
+</script>
+
+</body>
+</html>

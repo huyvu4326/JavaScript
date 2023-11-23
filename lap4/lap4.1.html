@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Bước 1: Tạo một mảng lưu trữ sản phẩm
+      var inventoryArray = [];
+      // Bước 2: Tạo 3 items
+      var item1 = {
+        name: "Laptop",
+        model: "XYZ123",
+        cost: 800,
+        quantity: 10,
+      };
+      var item2 = {
+        name: "Smartphone",
+        model: "ABC456",
+        cost: 500,
+        quantity: 20,
+      };
+      var item3 = {
+        name: "Headphones",
+        model: "DEF789",
+        cost: 50,
+        quantity: 30,
+      };
+      // Bước 3: Đưa 3 items vào mảng chính
+      inventoryArray.push(item1, item2, item3);
+      // Bước 4: Truy xuất quantity element của item thứ 3
+      console.log("Số lượng của item 3:", inventoryArray[2].quantity);
+      // Bước 5: Thêm và truy xuất thêm các elements khác từ main array
+      // Thêm một item mới vào mảng
+      var newItem = {
+        name: "Tablet",
+        model: "GHI123",
+        cost: 300,
+        quantity: 15,
+      };
+      inventoryArray.push(newItem);
+      // Truy xuất thông tin của item thứ 4 trong mảng
+      console.log("Thông tin của item 4:", inventoryArray[3]);
+      // Thêm một item khác vào mảng
+      inventoryArray.push({
+        name: "Digital Camera",
+        model: "JKL456",
+        cost: 400,
+        quantity: 25,
+      });
+      // Truy xuất số lượng của mảng
+      console.log("Số lượng items của mảng:", inventoryArray.length);
+      // Xuất mảng inventory array bằng console
+      console.log("Inventory Array:", inventoryArray);
+    </script>
+  </body>
+</html>
