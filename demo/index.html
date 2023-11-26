@@ -21,10 +21,10 @@
         <h3>Product 4</h3>
       </div>
     </div> -->
-    <button type="button" onclick="ketQua
-    
-    (1.75, 75)">Tính</button>
-    <script>
+    <!-- <button type="button" onclick="ketQua -->
+
+    <!-- (1.75, 75)">Tính</button> -->
+    <!-- <script>
       // let a = ["Gà", "Trâu", "Gà", "Bò"];
       // let b = ["Cá", "Vịt"];
       // a.push("Lợn"); // Thêm phần tử vào cuối mảng
@@ -52,23 +52,23 @@
       // }
       // tinhCanhHuyen(7,8)
 
-      function BMI(a, b) {
-        let bmi = b / (a * a);
-        return bmi;
-      }
+      // function BMI(a, b) {
+      //   let bmi = b / (a * a);
+      //   return bmi;
+      // }
 
-      function ketQua(a,b){
-        let bmi = BMI(a,b)
-        if (bmi < 18.5) {
-          console.log("Thiếu cân");
-        } else if (bmi >= 18.5 && bmi < 25) {
-          console.log("Bình thường");
-        } else if (bmi >= 25 && bmi < 30) {
-          console.log("Thừa cân");
-        } else if (bmi >= 30) {
-          console.log("Béo phì");
-        }
-      }
+      // function ketQua(a,b){
+      //   let bmi = BMI(a,b)
+      //   if (bmi < 18.5) {
+      //     console.log("Thiếu cân");
+      //   } else if (bmi >= 18.5 && bmi < 25) {
+      //     console.log("Bình thường");
+      //   } else if (bmi >= 25 && bmi < 30) {
+      //     console.log("Thừa cân");
+      //   } else if (bmi >= 30) {
+      //     console.log("Béo phì");
+      //   }
+      // }
 
       // let mang = [2,3,6,8,4,5];
       // let a = confirm("Bạn có muốn xóa");
@@ -78,8 +78,77 @@
       //   console.log("Từ chối");
       // }
       // console.log(mang);
+     </script> -->
 
-      
+    <!-- <form action="" id="form">
+        <div class="name">
+          <label for="">Name</label>
+          <input type="text" name="name" id="name" />
+        </div>
+        <div class="email">
+          <label for="">Email</label>
+          <input type="email" name="email" id="email" />
+        </div>
+        <div class="password">
+          <label for="">PassWord</label>
+          <input type="password" name="password" id="password" />
+        </div>
+        <div class="confirm">
+          <label for="">ConfirmPassword</label>
+          <input type="password" name="confirm" id="confirm" />
+        </div>
+        <button type="submit" id="submit">Submit</button>
+      </form> -->
+    <!-- <div class="item">
+        <span>Hà Huy Vũ</span>
+      </div> -->
+    <!-- <div id="image">
+      <img src="../image/download.jpg" alt="" id="images">
+    </div> -->
+    <!-- <div id="content">
+      <div class="item1" id="item1">
+        Giải quyết vấn đề mua và bán ở xã hội. Đó chính là đẩy nhanh tốc độ
+        quảng bá sản phẩm đến tay người dùng. Và mang lại ưu điểm cho người mua
+        đó chính là vấn đề tiết kiệm thời gian, chi phí mua hàng, …
+      </div>
+      <div class="item">1</div>
+      <div class="item">1</div>
+      <div class="item">1</div>
+    </div> -->
+    <button id="click" onclick="xuLy()">Submit</button> <br />
+    <script>
+      // function showImage() {
+      //   const img = document.getElementById("image");
+      //   const click = document.getElementById("click");
+      //   if (img.innerHTML.trim() == "") {
+      //     img.innerHTML = '<img src="../image/download.jpg" alt="">';
+      //     click.innerHTML = "Close Image";
+      //   } else {
+      //     img.innerHTML = "";
+      //     click.innerHTML = "Open Image";
+      //   }
+      // }
+      // const content = document.getElementById("content");
+      // const one = document.getElementById("one");
+      // function addItem() {
+      //   const span = document.createElement("span");
+      //   const text = document.createTextNode("hahaha");
+      //   span.innerHTML = "hihi"
+      //   content.appendChild(span)
+      //   content.removeChild(one);
+      // }
+      // function xuLy() {
+      //   let node = document.querySelector(".item1");
+      //   // console.dir(node);
+      //   if (node.style.display == "block") {
+      //     node.style.display = "none";
+      //   } else {
+      //     node.style.display = "block";
+      //   }
+      // }
+      const content = document.getElementById("content");
+      const items = document.getElementsByClassName("item");
+      const span = document
     </script>
   </body>
 </html>
